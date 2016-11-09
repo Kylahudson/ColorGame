@@ -48,7 +48,7 @@ function submit() {
 
         }
         else {
-            //console.log("the color chosen is:" + pick);
+            console.log("the color chosen is:" + pick);
 
             // prompts the user so page wont re-load
 
@@ -60,11 +60,18 @@ function submit() {
 
                 finished = true;
 
-
+  
             //background change
-            var myBody=document.getElementsByTagName("body")[0];
-            myBody.style.background=color ;}
-
+           // var myBody=document.getElementsByTagName("body")[0];
+           // myBody.style.background=color ;}
+           
+            try {
+                    var myBody=document.getElementsByTagName("body")[0];
+                    myBody.style.background=color;
+                }
+                catch (e) {
+                    console.log(e);
+                } 
             //lower
             else if(pick > guess){
 
@@ -80,13 +87,7 @@ function submit() {
 
     } while(finished == false);
 
-    try{
-        if(pick==guess);
-
-    }
-    catch(err){
-        console.log("the color chosen is:" + pick);
-    }
+    
 
 
 
