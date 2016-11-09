@@ -60,18 +60,23 @@ function submit() {
 
                 finished = true;
 
-  
+
             //background change
-           // var myBody=document.getElementsByTagName("body")[0];
-           // myBody.style.background=color ;}
-           
-            try {
+
+                try {
                     var myBody=document.getElementsByTagName("body")[0];
                     myBody.style.background=color;
                 }
                 catch (e) {
                     console.log(e);
-                } 
+                }
+
+
+
+
+            }
+
+
             //lower
             else if(pick > guess){
 
@@ -87,7 +92,8 @@ function submit() {
 
     } while(finished == false);
 
-    
+
+
 
 
 
@@ -95,3 +101,11 @@ function submit() {
 
 
 }
+    
+
+
+
+
+
+
+
